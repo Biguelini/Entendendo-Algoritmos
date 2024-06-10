@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        testarQuickSort();
+        testarHashMap();
     }
 
     public static void testarPesquisaBinaria(){
@@ -64,5 +64,9 @@ public class Main {
 
         List<Integer> sortedArray = Quicksort.quicksort(listaExemplo);
         System.out.println(sortedArray);
+    }
+
+    public static void testarHashMap(){
+        TabelaHash.criarHash();
     }
 }
