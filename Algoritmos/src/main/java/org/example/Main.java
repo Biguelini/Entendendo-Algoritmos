@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        testarOrdenacaoPorSelecao();
+        contagemRegressiva();
     }
 
     public static void testarPesquisaBinaria(){
@@ -31,5 +31,26 @@ public class Main {
         listaOrdenacao.add(10);
 
         OrdenacaoPorSelecao.ordenarPorSelecao(listaOrdenacao);
+    }
+
+    public static void testarRecursividade(){
+        Caixa caixaPrincipal = new Caixa();
+        Caixa caixaSecundaria = new Caixa();
+        Item chave = new Item(true);
+        Item itemQualquer = new Item();
+
+        // Colocar a chave na caixa secundária
+        caixaSecundaria.adicionarItem(chave);
+
+        // Colocar a caixa secundária na caixa principal
+        caixaPrincipal.adicionarItem(caixaSecundaria);
+        caixaPrincipal.adicionarItem(itemQualquer);
+
+        // Começar a busca pela chave na caixa principal
+        Recursividade.procurePelaChave(caixaPrincipal);
+    }
+
+    public static void contagemRegressiva(){
+        Regressiva.contagemRegressiva(10);
     }
 }
