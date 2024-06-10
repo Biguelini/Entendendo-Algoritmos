@@ -1,11 +1,12 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        contagemRegressiva();
+        exercicioDividirParaConquistar();
     }
 
     public static void testarPesquisaBinaria(){
@@ -52,5 +53,21 @@ public class Main {
 
     public static void contagemRegressiva(){
         Regressiva.contagemRegressiva(10);
+    }
+
+    public static void testarDividirParaConquistar(){
+
+    }
+
+    public static void exercicioDividirParaConquistar(){
+        List<Integer> listaExemplo = Arrays.asList(1, 5, 3, 9, 2, 8, 4, 7, 6, 15, 25, 19, 16);
+
+        System.out.println(DividirParaConquistar.somaItemsArray(listaExemplo));
+
+        int maximo = DividirParaConquistar.encontrarMaximo(listaExemplo, 0, listaExemplo.size() - 1);
+        System.out.println("O valor mais alto na lista é: " + maximo);
+
+        int totalItens = DividirParaConquistar.contarItens(listaExemplo, 0, listaExemplo.size() - 1);
+        System.out.println("O número total de itens na lista é: " + totalItens);
     }
 }
